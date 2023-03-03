@@ -27,13 +27,11 @@ buttonMenu.addEventListener("click", (e) => {
 // linkes
 let linkes = document.querySelectorAll("header .linkes ul li a");
 linkes.forEach((li) => {
-    li.addEventListener("clack", (e) => {
-        if (e.href === document.location.href) {
-            e.classList.add("active");
-        } else {
-            e.classList.remove("active");
-        }
-    });
+    if (li.href === document.location.href) {
+        li.classList.add("active");
+    } else {
+        li.classList.remove("active");
+    }
 });
 
 // end header
